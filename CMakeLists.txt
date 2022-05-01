@@ -29,6 +29,8 @@ add_compile_options(-fdiagnostics-color=always)
 include_directories (src/
                      vendor/glad/include/
                      vendor/glfw/include/
+                     DMathLib/include/
+                     DPhysicLib/include/
 #                     vendor/glm/include/glm
                      )
 file (GLOB         GLAD_SOURCES vendor/glad/src/glad.c)
@@ -45,8 +47,8 @@ add_definitions (-DGLFW_INCLUDE_NONE
                  -DPROJECT_SOURCE_DIR=\"${PROJECT_SOURCE_DIR}\")
 add_executable (${PROJECT_NAME} ${PROJECT_SOURCES} ${PROJECT_HEADERS} ${GLAD_SOURCES})
 
-target_include_directories(${PROJECT_NAME} PUBLIC DMath DPhysic)
-target_link_directories(${PROJECT_NAME} PUBLIC DMath DPhysic)
+#target_include_directories(${PROJECT_NAME} PUBLIC DMathLib DPhysicLib)
+#target_link_directories(${PROJECT_NAME} PUBLIC DMathLib DPhysicLib)
 
 target_link_libraries (${PROJECT_NAME}
                        glfw
