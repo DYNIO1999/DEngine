@@ -3,7 +3,7 @@ project(DEditor)
 
 include_directories(../DEngine/src)
 include_directories(../DEngine/vendor)
-
+include_directories(../DEngine/vendor/glad/include)
 
 file (GLOB_RECURSE EDITOR_HEADERS src/*.hpp
                                    src/*.h)
