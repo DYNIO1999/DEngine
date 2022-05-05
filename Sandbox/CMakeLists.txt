@@ -4,6 +4,7 @@ project(Sandbox)
 include_directories(../DEngine/src)
 include_directories(../DEngine/vendor)
 include_directories(../DEngine/vendor/glad/include)
+include_directories(../DEngine/vendor/spdlog/include)
 
 
 file (GLOB_RECURSE SANDBOX_HEADERS src/*.hpp

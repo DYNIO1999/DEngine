@@ -19,6 +19,10 @@ public:
 private:
     static std::shared_ptr<spdlog::logger> engineLogger;
 };
-
+#define DENGINE_TRACE(...) DEngine::LogManager::getLogger()->trace(__VA_ARGS__)
+#define DENGINE_INFO(...) DEngine::LogManager::getLogger()->info(__VA_ARGS__)
+#define DENGINE_WARN(...) DEngine::LogManager::getLogger()->warn(__VA_ARGS__)
+#define DENGINE_ERROR(...) DEngine::LogManager::getLogger()->error(__VA_ARGS__)
+#define DENGINE_CRITICAL(...) DEngine::LogManager::getLogger()->critical(__VA_ARGS__)
 };
 #endif
