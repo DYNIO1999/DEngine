@@ -3,6 +3,7 @@ project(DEngine)
 
 include_directories (vendor/glad/include/
                      vendor/glfw/include/
+                     vendor/spdlog/include/
                      )
 
 file (GLOB_RECURSE ENGINE_HEADERS src/*.hpp
