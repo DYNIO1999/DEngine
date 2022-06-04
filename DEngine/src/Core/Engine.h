@@ -1,7 +1,7 @@
 #ifndef _CORE_ENGINE_H_
 #define _CORE_ENGINE_H_
 #include <GLFW/glfw3.h>
-
+#include "Assert.h"
 
 /*
  Quick guide to style
@@ -24,6 +24,8 @@ public:
     ~Engine();
 
 
+    void Init();
+    void Shutdown();
     static Engine &Get()
     {
         static Engine instance;

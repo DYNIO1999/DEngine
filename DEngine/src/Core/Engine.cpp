@@ -7,16 +7,22 @@ namespace DEngine{
     Engine::~Engine(){
 
     }
+
+    void Engine::Init() {
+        LogManager::Init();
+    }
     void Engine::Run(){
+        Init();
+        DENGINE_ASSERT_NO_INFO(false);
         while(m_Running){
-
-            //Add logger!
-
             float currentTime  = glfwGetTime();
             m_deltaTime = currentTime - m_lastFrameTime;
             m_lastFrameTime = currentTime;
-
-
+           // DENGINE_ASSERT_NO_INFO(false);
         }
+        Shutdown();
+    }
+    void Engine::Shutdown() {
+
     }
 }

@@ -1,11 +1,7 @@
-#include "Core/LogManager.h"
+#include "Core/Engine.h"
 int main()
 {
-    DEngine::LogManager logger;
-    logger.init();
-
-    DENGINE_TRACE("Hey");
-    DENGINE_TRACE("TEST {}",1);
-
+    auto& engine = DEngine::Engine::Get();
+    engine.Run();
     return 0;
 }
