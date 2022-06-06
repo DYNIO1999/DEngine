@@ -11,17 +11,31 @@
 
 namespace DEngine{
 
+enum class WindowType{
+    None,
+    Windows,
+    Linux
+};
+
+struct WindowData
+{
+    std::string title = "DEngine";
+    uint width =1600;
+    uint height=900;
+};
+
 
 class Window
 {
 public:
-    Window();
-    ~Window();
+    static WindowType s_currentWindowType;
+protected:
 
-    
+    static std::shared_ptr<Window> Create(const WindowData& winData = WindowData());
+    Window()=default;
+    virtual ~Window();
+
 private:
-
-
 };
 }
 #endif

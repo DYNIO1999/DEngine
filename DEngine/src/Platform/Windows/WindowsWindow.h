@@ -1,0 +1,4 @@
+#ifndef _PLATFORM_WINDOWS_WINDOW_H_
+#define _PLATFORM_WINDOWS_WINDOW_H_
+
+#endif
