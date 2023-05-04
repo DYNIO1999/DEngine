@@ -1,0 +1,25 @@
+set(PLATFORMER_3D_PROJECT "platformer3D")
+
+project (${PLATFORMER_3D_PROJECT})
+
+file (GLOB_RECURSE PLATFORMER_3D_PROJECT_SOURCE_FILES
+    "source/*.h"
+    "source/*.cpp"
+)
+
+add_library(${PLATFORMER_3D_PROJECT} SHARED
+    ${PLATFORMER_3D_PROJECT_SOURCE_FILES}
+)
+
+#target_include_directories(${SCENE_PROJECT} PRIVATE
+#    "${PROJECT_SOURCE_DIR}/src"
+#    "${MOTUS_CORE_INCLUDE_DIR}/src"
+#    "${MOTUS_RENDERER_INCLUDE_DIR}/src"
+#    ${MOTUS_GLM_INCLUDE_DIR}
+#    ${MOTUS_SPDLOG_INCLUDE_DIR}
+#    ${MOTUS_STBI_INCLUDE_DIR}
+#)
+
+target_link_libraries(${PLATFORMER_3D_PROJECT} PRIVATE
+    dengine
+)
